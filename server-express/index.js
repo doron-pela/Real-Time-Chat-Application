@@ -50,4 +50,6 @@ app.post("/login", async (req, res) => {
 
 // Docs at rest.chatengine.io
 // vvv On port 3001!
-app.listen(3001);
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server is Running");
+});
